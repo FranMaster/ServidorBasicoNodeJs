@@ -20,5 +20,8 @@
   "homepage": "https://github.com/FranMaster/ServidorBasicoNodeJs#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "morgan": "^1.10.0"
   }
 }

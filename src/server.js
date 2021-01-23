@@ -1,5 +1,8 @@
 const express=require('express')
+const query=require('querystring')
+const morgan=require('morgan')
 const app=express()
+app.use(morgan('combined'))
 app.use(express.json())
 let PORT=8000
 const tokenAuth=569
@@ -63,6 +66,30 @@ app.get('/despedida',(req,res)=>{
 
 
 //http://localhost:8000
+
+
+app.post('/getUser/:idUser',(req,res)=>{
+    let idBuscado=req.params.idUser
+    let resultados=dbUsuarios.filter(item=>item.id==idBuscado)
+    if (resultados.length>0){
+        res.status(200).json({data:resultados[0]})
+    } else{
+        res.status(404).json({data:null})
+    } 
+
+});
+
+
+app.get('/getUser',(req,res)=>{
+    let idBuscado=req.query.idUser
+    let resultados=dbUsuarios.filter(item=>item.id==idBuscado)
+    if (resultados.length>0){
+        res.status(200).json({data:resultados[0]})
+    } else{
+        res.status(404).json({data:null})
+    } 
+
+});
 
 
 app.listen(PORT,()=>{
