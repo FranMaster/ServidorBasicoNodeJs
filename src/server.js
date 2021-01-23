@@ -64,10 +64,7 @@ app.get('/despedida',(req,res)=>{
 
 })
 
-
 //http://localhost:8000
-
-
 app.post('/getUser/:idUser',(req,res)=>{
     let idBuscado=req.params.idUser
     let resultados=dbUsuarios.filter(item=>item.id==idBuscado)
@@ -78,7 +75,6 @@ app.post('/getUser/:idUser',(req,res)=>{
     } 
 
 });
-
 
 app.get('/getUser',(req,res)=>{
     let idBuscado=req.query.idUser
