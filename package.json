@@ -1,0 +1,23 @@
+{
+  "name": "servidorbasiconodejs",
+  "version": "1.0.0",
+  "description": "Creamos Un servidor usando NodeJs y su Framework Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranMaster/ServidorBasicoNodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FranMaster/ServidorBasicoNodeJs/issues"
+  },
+  "homepage": "https://github.com/FranMaster/ServidorBasicoNodeJs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
